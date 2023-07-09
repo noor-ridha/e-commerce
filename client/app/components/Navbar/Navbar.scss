@@ -37,6 +37,33 @@
       background-color: transparent;
       font-size: 20px;
       font-weight: 500;
+      padding: 10px;
+      position: relative;
+      overflow: hidden;
+
+      &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          width: 0%;
+          height: 2px;
+          bottom: 0;
+          background-color: white;
+          transition: width 0.3s ease-in-out;
+        }
+      
+        &::before {
+          left: 0;
+        }
+      
+        &::after {
+          right: 0;
+        }
+      
+        &:hover::before,
+        &:hover::after {
+          width: 100%;
+        }
     }
 
     &__signup {
@@ -47,6 +74,25 @@
       padding: 10px 15px;
       font-size: 20px;
       font-weight: 500;
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #641f222b;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: -1;
+      }
+
+      &:hover::before {
+        transform: translateX(0%);
+      }
     }
 
     &__language {
