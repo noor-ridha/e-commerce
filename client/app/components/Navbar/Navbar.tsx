@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <nav className='desktop-nav'>
       <div className='desktop-nav__left'>
-        <h1 className='desktop-nav__left__log-'>LOGO</h1>
+        <h1 className='desktop-nav__left__logo'>LOGO</h1>
         <ul className='desktop-nav__left__list'>
           {['Home', 'About Us', 'Services'].map((item, index) => (
             <li key={index} className='desktop-nav__left__list__items'>
@@ -20,7 +20,10 @@ const Navbar = () => {
         <button type='button' className='desktop-nav__right__signup'>
           Signup
         </button>
-        <select name='language' title='langauge'>
+        <select
+          name='language'
+          title='langauge'
+          className='desktop-nav__right__language'>
           <option value='javascript'>JavaScript</option>
           <option value='python'>Python</option>
           <option value='c++'>C++</option>
