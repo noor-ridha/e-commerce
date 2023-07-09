@@ -28,10 +28,8 @@ const Navbar = () => {
           name='language'
           title='langauge'
           className='desktop-nav__right__language'>
-          <option value='javascript'>JavaScript</option>
-          <option value='python'>Python</option>
-          <option value='c++'>C++</option>
-          <option value='java'>Java</option>
+          <option value='English'>EN</option>
+          <option value='Arabic'>AR</option>
         </select>
       </div>
     </nav>
