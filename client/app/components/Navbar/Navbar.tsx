@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import './Navbar.scss';
 
 const Navbar = () => {
@@ -6,9 +8,11 @@ const Navbar = () => {
       <div className='desktop-nav__left'>
         <h1 className='desktop-nav__left__logo'>LOGO</h1>
         <ul className='desktop-nav__left__list'>
-          {['Home', 'About Us', 'Services'].map((item, index) => (
+          {['Home', 'About', 'Trending', 'Contact', 'Blog'].map((item, index) => (
             <li key={index} className='desktop-nav__left__list__items'>
-              {item}
+              <Link href={`/${item}`}>
+                {item}
+              </Link>
             </li>
           ))}
         </ul>

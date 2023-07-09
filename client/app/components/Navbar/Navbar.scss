@@ -8,11 +8,18 @@
   padding: 10px 50px;
 
   &__left {
+    display: flex;
+    align-items: center;
 
     &__logo {
-        font-size: 20px;
+        font-size: 22px;
         color: #641f23;
-        margin-right: 20px;
+        margin-right: 40px;
+    }
+
+    &__list {
+      display: flex;
+      gap: 25px;
     }
   }
 }
