@@ -126,11 +126,15 @@
 }
 
 .mobile-nav {
-  
+  display: none;
 }
 
 @media only screen and (max-width: 900px) {
   .desktop-nav {
     display: none !important;
+  }
+
+  .mobile-nav {
+    display: flex !important;
   }
 }

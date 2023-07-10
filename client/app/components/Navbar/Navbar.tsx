@@ -8,7 +8,7 @@ const Navbar = () => {
         <div className='desktop-nav__left'>
           <h1 className='desktop-nav__left__logo'>LOGO</h1>
           <ul className='desktop-nav__left__list'>
-            {['Home', 'About', 'Trending', 'Contact', 'Blog'].map(
+            {['Home', 'About', 'Wish', 'Contact'].map(
               (item, index) => (
                 <li key={index} className='desktop-nav__left__list__items'>
                   <Link href={`/${item}`}>{item}</Link>
@@ -40,9 +40,11 @@ const Navbar = () => {
           <div className='mobile-nav__appbar__cart'>CART</div>
         </div>
         <div className='mobile-nav__bottombar'>
-          <div className='mobile-nav__bottombar__wishlist'></div>
-          <div className='mobile-nav__bottombar__home'></div>
-          <div className='mobile-nav__bottombar__profile'></div>
+          <Link href='/Wish' className='mobile-nav__bottombar__wishlist'></Link>
+          <Link href='/Contact' className='mobile-nav__bottombar__contact'></Link>
+          <Link href='/Home' className='mobile-nav__bottombar__home'></Link>
+          <Link href='/About' className='mobile-nav__bottombar__about'></Link>
+          <Link href='/Profile' className='mobile-nav__bottombar__profile'></Link>
         </div>
       </nav>
     </>
