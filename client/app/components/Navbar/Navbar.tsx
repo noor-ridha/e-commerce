@@ -35,7 +35,15 @@ const Navbar = () => {
         </div>
       </nav>
       <nav className='mobile-nav'>
-
+        <div className='mobile-nav__appbar'>
+          <h1 className='mobile-nav__appbar__logo'>LOGO</h1>
+          <div className='mobile-nav__appbar__cart'>CART</div>
+        </div>
+        <div className='mobile-nav__bottombar'>
+          <div className='mobile-nav__bottombar__wishlist'></div>
+          <div className='mobile-nav__bottombar__home'></div>
+          <div className='mobile-nav__bottombar__profile'></div>
+        </div>
       </nav>
     </>
   );
