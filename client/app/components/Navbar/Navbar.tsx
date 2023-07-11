@@ -1,4 +1,7 @@
 import Link from 'next/link';
+
+import Cart from '@/app/assets/svg/Cart';
+
 import './Navbar.scss';
 
 const Navbar = () => {
@@ -37,7 +40,7 @@ const Navbar = () => {
       <nav className='mobile-nav'>
         <div className='mobile-nav__appbar'>
           <h1 className='mobile-nav__appbar__logo'>LOGO</h1>
-          <div className='mobile-nav__appbar__cart'>CART</div>
+          <div className='mobile-nav__appbar__cart'><Cart /></div>
         </div>
         <div className='mobile-nav__bottombar'>
           <Link href='/Wish' className='mobile-nav__bottombar__wishlist'>Wish</Link>
