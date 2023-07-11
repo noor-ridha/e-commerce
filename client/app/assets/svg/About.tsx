@@ -4,8 +4,8 @@ const About = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="800"
-      height="800"
+      width="25"
+      height="25"
       fill="#000"
       data-name="Layer 1"
       viewBox="0 0 52 52"

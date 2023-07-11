@@ -4,8 +4,8 @@ const Profile = () => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
-      width='800'
-      height='800'
+      width='25'
+      height='25'
       viewBox='0 0 20 20'
     >
       <g fill='none' fillRule='evenodd' stroke='none' strokeWidth='1'>
