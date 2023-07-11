@@ -40,11 +40,11 @@ const Navbar = () => {
           <div className='mobile-nav__appbar__cart'>CART</div>
         </div>
         <div className='mobile-nav__bottombar'>
-          <Link href='/Wish' className='mobile-nav__bottombar__wishlist'></Link>
-          <Link href='/Contact' className='mobile-nav__bottombar__contact'></Link>
-          <Link href='/Home' className='mobile-nav__bottombar__home'></Link>
-          <Link href='/About' className='mobile-nav__bottombar__about'></Link>
-          <Link href='/Profile' className='mobile-nav__bottombar__profile'></Link>
+          <Link href='/Wish' className='mobile-nav__bottombar__wishlist'>Wish</Link>
+          <Link href='/Contact' className='mobile-nav__bottombar__contact'>Contact</Link>
+          <Link href='/Home' className='mobile-nav__bottombar__home'>Home</Link>
+          <Link href='/About' className='mobile-nav__bottombar__about'>About</Link>
+          <Link href='/Profile' className='mobile-nav__bottombar__profile'>Profile</Link>
         </div>
       </nav>
     </>
