@@ -23,7 +23,7 @@ const Navbar = () => {
           <h1 className='desktop-nav__left__logo'>LOGO</h1>
           <ul className='desktop-nav__left__list'>
             {['Home', 'About', 'Wish', 'Contact'].map((item, index) => (
-              <li key={index} className={`desktop-nav__left__list__items ${currentRoute === `/` && 'active'}`}>
+              <li key={index} className={`desktop-nav__left__list__items ${currentRoute === `/${item}` && 'desktop-active'}`}>
                 <Link href={`/${item}`}>{item}</Link>
               </li>
             ))}
