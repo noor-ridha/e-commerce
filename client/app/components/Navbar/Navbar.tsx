@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 
 import About from '@/app/assets/svg/About';
@@ -7,9 +9,13 @@ import Home from '@/app/assets/svg/Home';
 import Profile from '@/app/assets/svg/Profile';
 import Wish from '@/app/assets/svg/Wish';
 
+import { usePathname } from 'next/navigation';
+
 import './Navbar.scss';
 
 const Navbar = () => {
+  const currentRoute = usePathname();
+
   return (
     <>
       <nav className='desktop-nav'>
@@ -17,7 +23,7 @@ const Navbar = () => {
           <h1 className='desktop-nav__left__logo'>LOGO</h1>
           <ul className='desktop-nav__left__list'>
             {['Home', 'About', 'Wish', 'Contact'].map((item, index) => (
-              <li key={index} className='desktop-nav__left__list__items'>
+              <li key={index} className={`desktop-nav__left__list__items ${currentRoute === `/` && 'active'}`}>
                 <Link href={`/${item}`}>{item}</Link>
               </li>
             ))}
