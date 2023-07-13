@@ -1,15 +1,15 @@
-import { FunctionComponent } from 'react'
+import { FunctionComponent } from 'react';
 
 interface AboutProps {
   readonly active: boolean;
-};
+}
 
 const About: FunctionComponent<AboutProps> = ({ active }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={active? '40':'25'}
-      height={active? '40':'25'}
+      width={active ? '40' : '25'}
+      height={active ? '40' : '25'}
       fill="#000"
       data-name="Layer 1"
       viewBox="0 0 52 52"
@@ -19,6 +19,6 @@ const About: FunctionComponent<AboutProps> = ({ active }) => {
       <circle cx="26" cy="15.71" r="2.57"></circle>
     </svg>
   );
-}
+};
 
 export default About;

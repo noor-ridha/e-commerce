@@ -1,7 +1,7 @@
 import { FunctionComponent } from 'react';
 
 interface HomeProps {
-  readonly active: boolean;
+  readonly active: boolean
 };
 
 const Home: FunctionComponent<HomeProps> = ({ active }) => {
