@@ -1,10 +1,10 @@
-import React from 'react';
+import { FunctionComponent } from 'react';
 
 interface WishProps {
   readonly active: boolean;
-}
+};
 
-const Wish = ({ active }: WishProps) => {
+const Wish: FunctionComponent<WishProps> = ({ active }) => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'

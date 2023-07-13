@@ -1,15 +1,15 @@
-import React from 'react';
+import { FunctionComponent } from 'react';
 
 interface ContactProps {
   readonly active: boolean;
-}
+};
 
-const Contact = ({ active }: ContactProps) => {
+const Contact: FunctionComponent<ContactProps> = ({ active }) => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
-      width={active? '40':'25'}
-      height={active? '40':'25'}
+      width={active ? '40' : '25'}
+      height={active ? '40' : '25'}
       viewBox='0 0 24 24'
     >
       <g fill='none' fillRule='evenodd' stroke='none' strokeWidth='1'>
@@ -47,6 +47,6 @@ const Contact = ({ active }: ContactProps) => {
       </g>
     </svg>
   );
-}
+};
 
 export default Contact;

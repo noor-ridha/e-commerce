@@ -1,10 +1,10 @@
-import React from 'react';
+import { FunctionComponent } from 'react';
 
 interface ProfileProps {
   readonly active: boolean;
-}
+};
 
-const Profile = ({ active }: ProfileProps) => {
+const Profile: FunctionComponent<ProfileProps> = ({ active }) => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'

@@ -1,10 +1,10 @@
-import React from "react";
+import { FunctionComponent } from 'react'
 
 interface AboutProps {
   readonly active: boolean;
-}
+};
 
-const About = ({ active }: AboutProps) => {
+const About: FunctionComponent<AboutProps> = ({ active }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

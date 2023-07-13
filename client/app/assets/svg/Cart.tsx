@@ -1,6 +1,8 @@
-import React from 'react';
+import { FunctionComponent } from 'react';
 
-const Cart = () => {
+interface CartProps { };
+
+const Cart: FunctionComponent<CartProps> = () => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'

@@ -1,10 +1,10 @@
-import React from 'react';
+import { FunctionComponent } from 'react';
 
 interface HomeProps {
   readonly active: boolean;
-}
+};
 
-const Home = ({ active }: HomeProps) => {
+const Home: FunctionComponent<HomeProps> = ({ active }) => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'

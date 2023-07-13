@@ -1,8 +1,9 @@
+import { NextPage } from 'next';
 
-const Home = () => {
-  return (
-    <section>page</section>
-  )
-}
+interface HomePageProps { };
+
+const Home: NextPage<HomePageProps> = () => {
+  return <section>page</section>;
+};
 
 export default Home;
