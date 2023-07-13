@@ -14,7 +14,7 @@ import { usePathname } from 'next/navigation';
 import './Navbar.scss';
 
 const Navbar = () => {
-  const currentRoute = usePathname();
+  const currentRoute: string = usePathname();
 
   return (
     <>

@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Profile = ({ active }: { active: boolean }) => {
+interface ProfileProps {
+  readonly active: boolean;
+}
+
+const Profile = ({ active }: ProfileProps) => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'

@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Wish = ({ active }: { active: boolean }) => {
+interface WishProps {
+  readonly active: boolean;
+}
+
+const Wish = ({ active }: WishProps) => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'

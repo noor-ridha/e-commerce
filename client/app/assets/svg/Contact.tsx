@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Contact = ({ active }: { active: boolean }) => {
+interface ContactProps {
+  readonly active: boolean;
+}
+
+const Contact = ({ active }: ContactProps) => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
