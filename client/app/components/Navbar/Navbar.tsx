@@ -26,10 +26,10 @@ const Navbar = () => {
               <li
                 key={index}
                 className={`desktop-nav__left__list__items ${
-                  currentRoute === `/${item}` && 'desktop-active'
+                  currentRoute === `/${item.toLowerCase()}` && 'desktop-active'
                 }`}
               >
-                <Link href={`/${item}`}>{item}</Link>
+                <Link href={`/${item.toLowerCase()}`}>{item}</Link>
               </li>
             ))}
           </ul>
@@ -59,20 +59,20 @@ const Navbar = () => {
           </div>
         </div>
         <div className='mobile-nav__bottombar'>
-          <Link href='/Wish' className='mobile-nav__bottombar__wishlist'>
-            <Wish active={currentRoute === '/Wish'? true : false} />
+          <Link href='/wish' className='mobile-nav__bottombar__wishlist'>
+            <Wish active={currentRoute === '/wish'? true : false} />
           </Link>
-          <Link href='/Contact' className='mobile-nav__bottombar__contact'>
-            <Contact active={currentRoute === '/Contact'? true : false} />
+          <Link href='/contact' className='mobile-nav__bottombar__contact'>
+            <Contact active={currentRoute === '/contact'? true : false} />
           </Link>
-          <Link href='/Home' className='mobile-nav__bottombar__home'>
-            <Home active={currentRoute === '/Home'? true : false} />
+          <Link href='/home' className='mobile-nav__bottombar__home'>
+            <Home active={currentRoute === '/home'? true : false} />
           </Link>
-          <Link href='/About' className='mobile-nav__bottombar__about'>
-            <About active={currentRoute === '/About'? true : false} />
+          <Link href='/about' className='mobile-nav__bottombar__about'>
+            <About active={currentRoute === '/about'? true : false} />
           </Link>
-          <Link href='/Profile' className='mobile-nav__bottombar__profile'>
-            <Profile active={currentRoute === '/Profile'? true : false} />
+          <Link href='/profile' className='mobile-nav__bottombar__profile'>
+            <Profile active={currentRoute === '/profile'? true : false} />
           </Link>
         </div>
       </nav>
