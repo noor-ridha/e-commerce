@@ -23,7 +23,12 @@ const Navbar = () => {
           <h1 className='desktop-nav__left__logo'>LOGO</h1>
           <ul className='desktop-nav__left__list'>
             {['Home', 'About', 'Wish', 'Contact'].map((item, index) => (
-              <li key={index} className={`desktop-nav__left__list__items ${currentRoute === `/${item}` && 'desktop-active'}`}>
+              <li
+                key={index}
+                className={`desktop-nav__left__list__items ${
+                  currentRoute === `/${item}` && 'desktop-active'
+                }`}
+              >
                 <Link href={`/${item}`}>{item}</Link>
               </li>
             ))}
@@ -55,19 +60,19 @@ const Navbar = () => {
         </div>
         <div className='mobile-nav__bottombar'>
           <Link href='/Wish' className='mobile-nav__bottombar__wishlist'>
-            <Wish />
+            <Wish active={currentRoute === '/Wish'? true : false} />
           </Link>
           <Link href='/Contact' className='mobile-nav__bottombar__contact'>
-            <Contact />
+            <Contact active={currentRoute === '/Contact'? true : false} />
           </Link>
           <Link href='/Home' className='mobile-nav__bottombar__home'>
-            <Home />
+            <Home active={currentRoute === '/Home'? true : false} />
           </Link>
           <Link href='/About' className='mobile-nav__bottombar__about'>
-            <About />
+            <About active={currentRoute === '/About'? true : false} />
           </Link>
           <Link href='/Profile' className='mobile-nav__bottombar__profile'>
-            <Profile />
+            <Profile active={currentRoute === '/Profile'? true : false} />
           </Link>
         </div>
       </nav>

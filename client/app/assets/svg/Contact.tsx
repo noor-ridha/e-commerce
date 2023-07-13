@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Contact = () => {
+const Contact = ({ active }: { active: boolean }) => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
-      width='25'
-      height='25'
+      width={active? '40':'25'}
+      height={active? '40':'25'}
       viewBox='0 0 24 24'
     >
       <g fill='none' fillRule='evenodd' stroke='none' strokeWidth='1'>
