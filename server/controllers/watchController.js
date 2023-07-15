@@ -52,8 +52,8 @@ const updateDoc = async (req, res) => {
     if (!watch) {
       return res.status(404).json({ message: `${id} not found` });
     }
-
-    res.status(200).json(watch);
+    const updatedWatch = await Wateches.findByIdAndUpdate(id, req.body);
+    res.status(200).json(updatedWatch);
   } catch (error) {
     res.status(500).json({ error: "bad request" });
   }
