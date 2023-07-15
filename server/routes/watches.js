@@ -1,34 +1,21 @@
 const express = require("express");
 const router = express.Router();
+const {
+  createDoc,
+  getWatch,
+  getSigleWatch,
+} = require("../controllers/watchController");
+
 const wateches = require("../ models/watchModel");
 // get all watches
-router.get("/", (req, res) => {
-  res.json({ message: " get all watches route" });
-});
+router.get("/", getWatch);
 // get single watch
-router.get("/:id", (req, res) => {
-  res.json({ message: "single watch " });
-});
+router.get("/:id", getSigleWatch);
 
-// create a product
-router.post("/", async (req, res) => {
-  const { title, picture, price, gender, color, description, brand } = req.body;
-  try {
-    const watch = await wateches.create({
-      title,
-      picture,
-      price,
-      gender,
-      color,
-      description,
-      brand,
-    });
-    res.status(200).json(watch);
-  } catch (error) {
-    res.status(400).json({ error: error.message });
-  }
-  // res.json({ message: "hello from post route" });
-});
+// create a product route
+router.post("/", createDoc);
+
+// update route
 router.patch("/:id", (req, res) => {
   res.json({ message: "edit" });
 });
