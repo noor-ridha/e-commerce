@@ -4,6 +4,8 @@ const {
   createDoc,
   getWatch,
   getSigleWatch,
+  deleteDoc,
+  updateDoc,
 } = require("../controllers/watchController");
 
 const wateches = require("../ models/watchModel");
@@ -16,10 +18,6 @@ router.get("/:id", getSigleWatch);
 router.post("/", createDoc);
 
 // update route
-router.patch("/:id", (req, res) => {
-  res.json({ message: "edit" });
-});
-router.delete("/:id", (req, res) => {
-  res.json({ message: "delete" });
-});
+router.patch("/:id", updateDoc);
+router.delete("/:id", deleteDoc);
 module.exports = router;
