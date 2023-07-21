@@ -7,7 +7,11 @@ import {
 const Watch = () => {
   const { scene } = useGLTF('./models/watch.glb');
 
-  return <primitive object={scene} scale={[150, 150, 150]} />;
+  return (
+    <mesh castShadow>
+      <primitive object={scene} scale={[150, 150, 150]} />
+    </mesh>
+  );
 }
 
 export default Watch;
