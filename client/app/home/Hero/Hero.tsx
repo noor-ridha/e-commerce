@@ -1,7 +1,7 @@
 'use client';
 
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
+import { OrbitControls, Float } from '@react-three/drei';
 
 import Watch from './Watch';
 
@@ -20,8 +20,14 @@ export default function Hero() {
         </p>
       </div>
       <div className="home-hero__model">
-        <Canvas camera={{position: [8, 0, 7] }}>
-          <Watch />
+        <Canvas camera={{ position: [5, 0, 7] }}>
+          <Float
+            speed={2} // Animation speed, defaults to 1
+            rotationIntensity={1.5} // XYZ rotation intensity, defaults to 1
+            floatingRange={[1, 2]} // Range of y-axis values the object will float within, defaults to [-0.1,0.1]
+          >
+            <Watch />
+          </Float>
           <ambientLight intensity={0.8} />
           <directionalLight intensity={0.5} />
           <OrbitControls />
