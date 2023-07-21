@@ -1,7 +1,7 @@
 'use client';
 
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Float } from '@react-three/drei';
+import { Float } from '@react-three/drei';
 
 import Watch from './Watch';
 
@@ -30,7 +30,6 @@ export default function Hero() {
           </Float>
           <ambientLight intensity={0.8} />
           <directionalLight intensity={0.5} />
-          <OrbitControls />
         </Canvas>
       </div>
     </div>
