@@ -11,6 +11,7 @@ const Home: NextPage<HomePageProps> = () => {
   return (
     <section className="home">
       <Hero />
+      <h2 className="home__watches-title">Watches</h2>
       <WatchesList />
     </section>
   );
