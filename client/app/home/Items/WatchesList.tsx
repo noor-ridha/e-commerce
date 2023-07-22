@@ -1,10 +1,11 @@
+import WatchesItem from './WatchesItem';
 
-import './WatchesList.scss'
+import './WatchesList.scss';
 
 const WatchesList = () => {
   return (
     <div className='watch-list'>
-        works
+        <WatchesItem />
     </div>
   );
 }
