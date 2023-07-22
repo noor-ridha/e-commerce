@@ -1,7 +1,7 @@
 'use client';
 
 import { Canvas } from '@react-three/fiber';
-import { Float, Plane, OrbitControls } from '@react-three/drei';
+import { Float, Plane } from '@react-three/drei';
 
 import Watch from './WatchModel';
 
@@ -23,7 +23,6 @@ const WatchScene = () => {
         position={[0, -7, 0]}
         args={[1000, 1000]}
       />
-      <OrbitControls />
     </Canvas>
   );
 };
