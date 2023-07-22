@@ -9,6 +9,9 @@ const WatchesItem = () => {
       <div className="watch-item__info__name">Watch Name</div>
       <div className="watch-item__info__price">$100</div>
     </div>
+    <button type='button' className="watch-item__button">
+      Discover
+    </button>
   </div>;
 };
 
