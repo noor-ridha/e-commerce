@@ -4,7 +4,7 @@ import {
   useGLTF,
 } from '@react-three/drei';
 
-const Watch = () => {
+const WatchModel = () => {
   const { scene } = useGLTF('./models/watch.glb');
 
   return (
@@ -14,6 +14,6 @@ const Watch = () => {
   );
 }
 
-export default Watch;
+export default WatchModel;
 
 useGLTF.preload('./models/watch.glb');
