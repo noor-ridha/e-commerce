@@ -2,6 +2,7 @@ import { NextPage } from 'next';
 
 import Hero from './Hero/Hero';
 import WatchesList from './Items/WatchesList';
+import BestCollection from './BestCollection/BestCollection';
 
 import './home.scss';
 
@@ -13,6 +14,7 @@ const Home: NextPage<HomePageProps> = () => {
       <Hero />
       <h2 className="home__watches-title">Watches</h2>
       <WatchesList />
+      <BestCollection />
     </section>
   );
 };
