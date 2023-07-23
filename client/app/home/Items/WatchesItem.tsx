@@ -9,8 +9,8 @@ const WatchesItem = () => {
         className="watch-item__image"
       />
       <div className="watch-item__info">
-        <div className="watch-item__info__name">Watch Name</div>
-        <div className="watch-item__info__price">$100</div>
+        <p className="watch-item__info__name">Rolex Purple Dimond</p>
+        <p className="watch-item__info__price">$6,899</p>
         <button type="button" className="watch-item__button">
           Discover
         </button>
