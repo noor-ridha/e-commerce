@@ -1,8 +1,17 @@
+import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
+
 import './WatchesItem.scss';
 
 const WatchesItem = () => {
+  const favorite: boolean = false;
+
   return (
     <div className="watch-item">
+      {favorite === true ? (
+        <AiFillHeart className="watch-item__favorite" />
+      ) : (
+        <AiOutlineHeart className="watch-item__favorite" />
+      )}
       <img
         src="https://i.ebayimg.com/images/g/anUAAOSwHUZjaT7N/s-l1600.jpg"
         alt="watch"
