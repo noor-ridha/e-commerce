@@ -3,6 +3,7 @@ const app = express();
 const mongoose = require("mongoose");
 require("dotenv").config();
 const watchesRoute = require("./routes/watches.js");
+const userRoute = require("./routes/auth.js");
 
 app.use(express.json());
 app.use((req, res, next) => {
@@ -10,6 +11,7 @@ app.use((req, res, next) => {
   next();
 });
 app.use("/api/watches", watchesRoute);
+app.use("/api/", userRoute);
 
 // connect to mongodb
 mongoose
