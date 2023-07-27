@@ -15,7 +15,7 @@ const BestCollectionItem = () => {
         <p className="collection-item__info__price">6,899 $</p>
         <button
           type="button"
-          className="btn btn--primary collection-item__add-to-cart"
+          className="btn btn--primary collection-item__discover"
         >
           Discover Me
         </button>
