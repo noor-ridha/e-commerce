@@ -1,5 +1,9 @@
+import Image from 'next/image';
+
+import MhamadImg from '../../assets/images/Mhamad.jpg';
+import GitHubImg from '../../assets/images/GitHub.png';
+
 import './Footer.scss';
-import WatchesItem from './../../home/Items/WatchesItem';
 
 const Footer = () => {
   return (
@@ -24,7 +28,23 @@ const Footer = () => {
           <li className="quick-links__list__item">Contact</li>
         </ul>
       </div>
-      <div className="contact-us"></div>
+      <div className="contact-us">
+        <h1 className="contact-us__title">Developed by</h1>
+        <div className="contact-us__us">
+          <div className="contact-us__us__person">
+            <Image
+              className="contact-us__us__person__bg-img"
+              src={MhamadImg}
+              alt="Mhamad Raad"
+            />
+            <Image
+              src={GitHubImg}
+              alt="Github"
+              className="contact-us__us__person__social"
+            />
+          </div>
+        </div>
+      </div>
     </footer>
   );
 };
