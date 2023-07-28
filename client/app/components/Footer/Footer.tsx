@@ -1,7 +1,9 @@
 import Image from 'next/image';
 
 import MhamadImg from '../../assets/images/Mhamad.jpg';
+import NoorImg from '../../assets/images/Noor.jpg';
 import GitHubImg from '../../assets/images/GitHub.png';
+import LinkedInImg from '../../assets/images/LinkedIn.png';
 
 import './Footer.scss';
 
@@ -39,6 +41,42 @@ const Footer = () => {
             />
             <Image
               src={GitHubImg}
+              alt="Github"
+              className="contact-us__us__person__social"
+            />
+          </div>
+          <div className="contact-us__us__person">
+            <Image
+              className="contact-us__us__person__bg-img"
+              src={NoorImg}
+              alt="Mhamad Raad"
+            />
+            <Image
+              src={GitHubImg}
+              alt="Github"
+              className="contact-us__us__person__social"
+            />
+          </div>
+          <div className="contact-us__us__person">
+            <Image
+              className="contact-us__us__person__bg-img"
+              src={MhamadImg}
+              alt="Mhamad Raad"
+            />
+            <Image
+              src={LinkedInImg}
+              alt="Github"
+              className="contact-us__us__person__social"
+            />
+          </div>
+          <div className="contact-us__us__person">
+            <Image
+              className="contact-us__us__person__bg-img"
+              src={NoorImg}
+              alt="Mhamad Raad"
+            />
+            <Image
+              src={LinkedInImg}
               alt="Github"
               className="contact-us__us__person__social"
             />
