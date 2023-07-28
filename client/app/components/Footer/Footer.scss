@@ -29,8 +29,34 @@ footer {
     }
   }
   &__description {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
     margin-top: 10px;
+    text-align: center;
+  }
+}
+
+.quick-links {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    font-size: 20px;
+    font-weight: bolder;
+  }
+
+  &__list {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    &__item {
+      font-size: 12px;
+      font-weight: bold;
+      border-bottom: 1px solid white;
+      padding-bottom: 2px;
+      width: fit-content;
+    }
   }
 }
