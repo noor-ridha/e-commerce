@@ -10,6 +10,7 @@
   background-color: black;
   position: relative;
   gap: 10px;
+  min-width: 250px;
 
   &__favorite {
     position: absolute;
@@ -38,6 +39,10 @@
     &__name {
       font-size: 24px;
       font-weight: bolder;
+      width: 80%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
 
     &__price {
