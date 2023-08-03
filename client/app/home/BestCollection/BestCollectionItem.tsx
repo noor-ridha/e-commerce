@@ -13,12 +13,14 @@ const BestCollectionItem = () => {
       <div className="collection-item__info">
         <h2 className="collection-item__info__title">Rolex Purple Diamond</h2>
         <p className="collection-item__info__price">6,899 $</p>
-        <button
-          type="button"
-          className="btn btn--primary collection-item__discover"
-        >
-          Discover Me
-        </button>
+        <div className="btn btn--primary collection-item__discover">
+          <button
+            type="button"
+            className="btn btn--primary collection-item__discover__btn"
+            >
+            Discover Me
+          </button>
+        </div>
       </div>
     </div>
   );

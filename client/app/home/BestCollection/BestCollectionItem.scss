@@ -3,15 +3,17 @@
   height: 150px;
   display: flex;
   gap: 20px;
-  background-color: black; 
+  background-color: black;
+  min-width: 275px;
+  position: relative;
 
   &__img-bg {
     background-color: red;
-    width: 150px;
+    min-width: 150px;
     height: 150px;
-    
+
     &__image {
-      width: 90%;
+      min-width: 90%;
       height: 90%;
     }
   }
@@ -20,13 +22,32 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    position: relative;
+    width: calc(100% - 190px);
+
+    &__title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      height: 25px;
+      white-space: nowrap;
+    }
   }
 
   &__discover {
-    width: auto;
-    margin-left: auto;
-    margin-right: 5px;
-    padding: 7px 10px;
-    font-weight: bold;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    &__btn {
+      padding: 7px 10px;
+      font-weight: bold;
     }
+  }
+}
+
+// min width for mobile
+@media (max-width: 768px) {
+  .collection-item {
+    width: 100% !important;
+  }
 }
