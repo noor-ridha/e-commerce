@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import MhamadImg from '../../assets/images/Mhamad.jpg';
 import NoorImg from '../../assets/images/Noor.jpg';
@@ -23,12 +24,20 @@ const Footer = () => {
       </div>
       <div className="quick-links">
         <h1 className="quick-links__title">Quick Links</h1>
-        <ul className="quick-links__list">
-          <li className="quick-links__list__item">Home</li>
-          <li className="quick-links__list__item">About</li>
-          <li className="quick-links__list__item">Wish</li>
-          <li className="quick-links__list__item">Contact</li>
-        </ul>
+        <div className="quick-links__list">
+          <Link href="./home" className="quick-links__list__item">
+            Home
+          </Link>
+          <Link href="/about" className="quick-links__list__item">
+            About
+          </Link>
+          <Link href="/wish" className="quick-links__list__item">
+            Wish
+          </Link>
+          <Link href="/contact" className="quick-links__list__item">
+            Contact
+          </Link>
+        </div>
       </div>
       <div className="contact-us">
         <h1 className="contact-us__title">Developed by</h1>
