@@ -1,0 +1,55 @@
+.collection-item {
+  width: 40%;
+  height: 200px;
+  display: flex;
+  gap: 20px;
+  background-color: black;
+  min-width: 275px;
+  position: relative;
+
+  &__img-bg {
+    background-color: red;
+    width: 40%;
+    min-width: 100px;
+    height: 100%;
+
+    &__image {
+      width: 95%;
+      height: 90%;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    width: calc(100% - 190px);
+    padding-right: 10px;
+
+    &__title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      height: 25px;
+      white-space: nowrap;
+    }
+  }
+
+  &__discover {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    &__btn {
+      padding: 7px 10px;
+      font-weight: bold;
+    }
+  }
+}
+
+// min width for mobile
+@media (max-width: 900px) {
+  .collection-item {
+    width: 100% !important;
+  }
+}

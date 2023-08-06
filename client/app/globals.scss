@@ -19,8 +19,27 @@ select {
 body {
   background-color: rgb(52, 52, 52);
   color: white;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.main {
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 ul {
   list-style-type: none;
+}
+
+main {
+  padding: 25px  50px;
+}
+
+@media only screen and (max-width: 900px) {
+  main {
+      padding: 12.5px 0px;
+    }
 }
