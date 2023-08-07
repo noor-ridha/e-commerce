@@ -3,6 +3,19 @@ const app = express();
 const mongoose = require("mongoose");
 require("dotenv").config();
 const watchesRoute = require("./routes/watches.js");
+const userRoute = require("./routes/auth.js");
+
+app.use((req, res, next) => {
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "backend-tnlk.onrender.com/api/watches/ , http://localhost:7000/  "
+  );
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, Patch, DELETE");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  next();
+});
+
+app.use(cors());
 
 app.use(express.json());
 app.use((req, res, next) => {
@@ -10,6 +23,7 @@ app.use((req, res, next) => {
   next();
 });
 app.use("/api/watches", watchesRoute);
+app.use("/api/", userRoute);
 
 // connect to mongodb
 mongoose
