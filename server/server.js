@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 const watchesRoute = require("./routes/watches.js");
 const userRoute = require("./routes/auth.js");
+const cors = require("cors");
 
 app.use((req, res, next) => {
   res.setHeader(
