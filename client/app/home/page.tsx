@@ -7,15 +7,29 @@ import TodayCollection from './TodayCollection/TodayCollection';
 
 import './home.scss';
 
-interface HomePageProps {}
+const getData = async () => {
+  const res = await fetch('http://localhost:7000/api/watches');
+  const watches = await res.json();
 
-const Home: NextPage<HomePageProps> = () => {
+  console.log(watches);
+
+  return watches;
+};
+
+interface HomePageProps {
+}
+
+const Home: NextPage<HomePageProps> = async () => {
+
+  const watches = getData();
+  
+  console.log(watches);
   return (
     <section className="home">
       <Hero />
       <TodayCollection />
       <h2 className="home__watches-title">Watches</h2>
-      <WatchesList />
+      <WatchesList watches={watches} />
       <BestCollection />
     </section>
   );
