@@ -17,7 +17,7 @@
   }
 
   &:hover > &__info {
-    height: 25%;
+    height: 20%;
     opacity: 1;
   }
 
@@ -38,6 +38,24 @@
     height: 50%;
     object-fit: cover;
     z-index: 1;
+  }
+
+  &__title {
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: bolder;
+    width: 350px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  &__brand {
+    font-weight: 100;
+    font-size: 20px;
+    text-align: center;
+
   }
 
   &__info {
@@ -76,6 +94,10 @@
 
     &__img {
       height: 40%;
+    }
+
+    &__title {
+      width: 200px;
     }
   }
 }

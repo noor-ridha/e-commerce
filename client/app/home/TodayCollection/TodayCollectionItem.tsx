@@ -22,6 +22,7 @@ const TodayCollectionItem: FC<WatchItemProps> = ({ watch }) => {
       <div className="today-item__circle-effect" />
       <img alt="img" src={watch.picture} className="today-item__img" />
       <h2 className="today-item__title">{watch.title}</h2>
+      <h2 className="today-item__brand">{watch.brand}</h2>
       <div className="today-item__info">
         <p className="today-item__info__price">{`${watch.price} $`}</p>
         <button
