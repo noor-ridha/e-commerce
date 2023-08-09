@@ -1,4 +1,12 @@
+'use client';
+
 import { FunctionComponent } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { RootState } from '../../Redux/store';
+import {
+  addToFavorites,
+  removeFromFavorites,
+} from '../../Redux/FavoritesSlice';
 
 import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
 
@@ -6,6 +14,7 @@ import './WatchesItem.scss';
 
 interface WatchItemProps {
   watch: {
+    _id: string;
     title: string;
     price: number;
     gender: string;
@@ -17,14 +26,24 @@ interface WatchItemProps {
 }
 
 const WatchesItem: FunctionComponent<WatchItemProps> = ({ watch }) => {
-  const favorite: boolean = false;
+  const dispatch = useDispatch();
+  const favorites = useSelector((state: RootState) => state.favorites.watches);
+  const favorite: boolean = favorites.some(
+    (favorite) => favorite._id === watch._id,
+  );
 
   return (
     <div className="watch-item">
       {favorite === true ? (
-        <AiFillHeart className="watch-item__favorite" />
+        <AiFillHeart
+          className="watch-item__favorite"
+          onClick={() => dispatch(removeFromFavorites(watch))}
+        />
       ) : (
-        <AiOutlineHeart className="watch-item__favorite" />
+        <AiOutlineHeart
+          className="watch-item__favorite"
+          onClick={() => dispatch(addToFavorites(watch))}
+        />
       )}
       <img src={watch.picture} alt="watch" className="watch-item__image" />
       <div className="watch-item__info">
