@@ -13,7 +13,9 @@ const TodayCollection: FC<TodayListProps> = ({ watches }) => {
     <div className="today-collection">
       <h2 className="today-collection__title">Today's Collection</h2>
       <div className="today-collection__list">
-        {watches?.map((watch) => <TodayCollectionItem watch={watch} />)}
+        {watches?.map((watch) => (
+          <TodayCollectionItem watch={watch} key={watch.id} />
+        ))}
       </div>
     </div>
   );

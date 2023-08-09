@@ -11,7 +11,7 @@ interface WatchListProps {
 const WatchesList: FunctionComponent<WatchListProps> = ({ watches }) => {
   return (
     <div className="watch-list">
-      {watches?.map((watch) => <WatchesItem watch={watch} />)}
+      {watches?.map((watch) => <WatchesItem watch={watch} key={watch.id} />)}
     </div>
   );
 };
