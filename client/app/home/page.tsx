@@ -16,10 +16,10 @@ const Home: NextPage<HomePageProps> = async () => {
   return (
     <section className="home">
       <Hero />
-      <TodayCollection />
+      <TodayCollection watches={watches} />
       <h2 className="home__watches-title">Watches</h2>
       <WatchesList watches={watches} />
-      <BestCollection />
+      <BestCollection watches={watches} />
     </section>
   );
 };
