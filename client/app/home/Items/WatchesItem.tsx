@@ -1,8 +1,22 @@
-import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
+import { FunctionComponent } from 'react';
+
+import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
 
 import './WatchesItem.scss';
 
-const WatchesItem = () => {
+interface WatchItemProps {
+  watch: {
+    title: string;
+    price: number;
+    gender: string;
+    description: string;
+    picture: string;
+    color: string;
+    brand: string;
+  };
+}
+
+const WatchesItem: FunctionComponent<WatchItemProps> = ({ watch }) => {
   const favorite: boolean = false;
 
   return (
@@ -12,14 +26,11 @@ const WatchesItem = () => {
       ) : (
         <AiOutlineHeart className="watch-item__favorite" />
       )}
-      <img
-        src="https://i.ebayimg.com/images/g/anUAAOSwHUZjaT7N/s-l1600.jpg"
-        alt="watch"
-        className="watch-item__image"
-      />
+      <img src={watch.picture} alt="watch" className="watch-item__image" />
       <div className="watch-item__info">
-        <p className="watch-item__info__name">Rolex Purple Dimond</p>
-        <p className="watch-item__info__price">$6,899</p>
+        <p className="watch-item__info__name">{watch.title}</p>
+        <p className="watch-item__info__brand">{watch.brand}</p>
+        <p className="watch-item__info__price">{`${watch.price} $`}</p>
         <button type="button" className="watch-item__button">
           Discover
         </button>

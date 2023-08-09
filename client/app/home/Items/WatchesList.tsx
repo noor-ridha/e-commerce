@@ -12,9 +12,7 @@ const WatchesList: FunctionComponent<WatchListProps> = ({ watches }) => {
   console.log(watches);
   return (
     <div className="watch-list">
-      {watches?.map((watch) => (
-        <WatchesItem />
-      ))}
+      {watches?.map((watch) => <WatchesItem watch={watch} />)}
     </div>
   );
 };
