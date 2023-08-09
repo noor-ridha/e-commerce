@@ -5,13 +5,9 @@ import WatchesList from './Items/WatchesList';
 import BestCollection from './BestCollection/BestCollection';
 import TodayCollection from './TodayCollection/TodayCollection';
 
-import './home.scss';
+import { getWatches } from '../fetch/Watch';
 
-const getWatches = async () => {
-  const res = await fetch('http://localhost:7000/api/watches');
-  const watches = await res.json();
-  return watches;
-};
+import './home.scss';
 
 interface HomePageProps {}
 
