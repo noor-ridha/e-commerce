@@ -26,6 +26,7 @@ const getSingleWatch = async (id: string) => {
     picture: string;
     color: string;
     brand: string;
+    _id: string;
   } = await (await res).json();
 
   return watch;

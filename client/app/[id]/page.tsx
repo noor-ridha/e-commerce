@@ -1,4 +1,4 @@
-import { GrFormNextLink } from 'react-icons/gr';
+import AddToCartButton from './AddToCartButton';
 
 import { getSingleWatch } from '../fetch/Watch';
 
@@ -40,10 +40,7 @@ const Page = async ({ params }: { params: { id: string } }) => {
           </div>
         </div>
         <p className="details-page__right__price">{`Price: ${watch.price} $`}</p>
-        <button type="button" className="details-page__right__add-to-cart">
-          Add to cart
-          <GrFormNextLink className="details-page__right__add-to-cart__next" />
-        </button>
+        <AddToCartButton watch={watch} />
       </div>
     </div>
   );
