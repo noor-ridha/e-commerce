@@ -18,7 +18,15 @@ const getSingleWatch = async (id: string) => {
     },
   });
 
-  const watch: object = await (await res).json();
+  const watch: {
+    title: string;
+    price: number;
+    gender: string;
+    description: string;
+    picture: string;
+    color: string;
+    brand: string;
+  } = await (await res).json();
 
   return watch;
 };
