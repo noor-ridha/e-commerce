@@ -1,3 +1,5 @@
+import { GrFormNextLink } from 'react-icons/gr';
+
 import { getSingleWatch } from '../fetch/Watch';
 
 import './Details.scss';
@@ -21,10 +23,27 @@ const Page = async ({ params }: { params: { id: string } }) => {
         <h2 className="details-page__right__brand">{watch.brand}</h2>
         <p className="details-page__right__description">{watch.description}</p>
         <div className="details-page__right__row">
-          <p className="details-page__right__row__color">{watch.color}</p>
-          <p className="details-page__right__row__gender">{watch.gender}</p>
+          <div className="details-page__right__row__column">
+            <h3 className="details-page__right__row__column__title">
+              Model Color
+            </h3>
+            <p
+              className="details-page__right__row__column__color"
+              style={{ backgroundColor: watch.color }}
+            />
+          </div>
+          <div className="details-page__right__row__column">
+            <h3 className="details-page__right__row__column__title">Gender</h3>
+            <p className="details-page__right__row__column__gender">
+              {watch.gender}
+            </p>
+          </div>
         </div>
-        <p className="details-page__right__price">{`${watch.price} $`}</p>
+        <p className="details-page__right__price">{`Price: ${watch.price} $`}</p>
+        <button type="button" className="details-page__right__add-to-cart">
+          Add to cart
+          <GrFormNextLink className="details-page__right__add-to-cart__next" />
+        </button>
       </div>
     </div>
   );
