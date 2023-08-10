@@ -1,4 +1,7 @@
+'use client';
+
 import { FC } from 'react';
+import { useRouter } from 'next/navigation';
 
 import './BestCollectionItem.scss';
 
@@ -11,10 +14,13 @@ interface WatchItemProps {
     picture: string;
     color: string;
     brand: string;
+    _id: string;
   };
 }
 
 const BestCollectionItem: FC<WatchItemProps> = ({ watch }) => {
+  const router = useRouter();
+
   return (
     <div className="collection-item">
       <div className="collection-item__img-bg">
@@ -31,6 +37,7 @@ const BestCollectionItem: FC<WatchItemProps> = ({ watch }) => {
           <button
             type="button"
             className="btn btn--primary collection-item__discover__btn"
+            onClick={() => router.push(`/${watch._id}`)}
           >
             Discover Me
           </button>
