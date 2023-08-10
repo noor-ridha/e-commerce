@@ -5,11 +5,11 @@ import './Details.scss';
 const Page = async ({ params }: { params: { id: string } }) => {
   const watch = await getSingleWatch(params.id);
 
-  console.log(watch);
   return (
     <div className="details-page">
       <div className="details-page__left">
         <div className="details-page__left__bg" />
+        <div className="details-page__left__collection" />
         <img
           alt="item"
           src={watch.picture}

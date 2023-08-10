@@ -1,0 +1,47 @@
+.details-page {
+  display: flex;
+  height: 70vh;
+  margin-top: 100px;
+
+  &__left {
+    width: 50%;
+    height: 450px;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    padding: 15px;
+    position: relative;
+
+    &__bg {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: white;
+      position: absolute;
+      z-index: 0;
+    }
+
+    &__collection {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+      width: 30%;
+      height: 100%;
+    }
+
+    &__img {
+      width: 70%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+  }
+
+  &__right {
+    padding: 15px;
+    width: 50%;
+    height: 450px;
+  }
+}
