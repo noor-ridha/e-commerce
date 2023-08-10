@@ -10,4 +10,17 @@ const getWatches: () => Promise<any[]> = async () => {
   }
 };
 
-export { getWatches };
+const getSingleWatch = async (id: string) => {
+  const res = fetch(`http://localhost:7000/api/watches/${id}`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+
+  const watch: object = await (await res).json();
+
+  return watch;
+};
+
+export { getWatches, getSingleWatch };
