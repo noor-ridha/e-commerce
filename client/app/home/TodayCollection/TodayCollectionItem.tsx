@@ -1,4 +1,7 @@
+'use client';
+
 import { FC } from 'react';
+import { useRouter } from 'next/navigation';
 
 import './TodayCollectionItem.scss';
 
@@ -13,10 +16,13 @@ interface WatchItemProps {
     picture: string;
     color: string;
     brand: string;
+    _id: string;
   };
 }
 
 const TodayCollectionItem: FC<WatchItemProps> = ({ watch }) => {
+  const router = useRouter();
+
   return (
     <div className="today-item">
       <div className="today-item__circle-effect" />
@@ -29,6 +35,7 @@ const TodayCollectionItem: FC<WatchItemProps> = ({ watch }) => {
           className="today-item__info__add-cart"
           title="add"
           type="button"
+          onClick={() => router.push(`/${watch._id}`)}
         >
           <GrNext className="today-item__info__add-cart__next" />
         </button>
