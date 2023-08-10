@@ -2,6 +2,7 @@
 
 import { FunctionComponent } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { useRouter } from 'next/navigation';
 import { RootState } from '../../Redux/store';
 import {
   addToFavorites,
@@ -27,6 +28,8 @@ interface WatchItemProps {
 
 const WatchesItem: FunctionComponent<WatchItemProps> = ({ watch }) => {
   const dispatch = useDispatch();
+  const router = useRouter();
+
   const favorites = useSelector((state: RootState) => state.favorites.watches);
   const favorite: boolean = favorites.some(
     (favorite) => favorite._id === watch._id,
@@ -50,7 +53,11 @@ const WatchesItem: FunctionComponent<WatchItemProps> = ({ watch }) => {
         <p className="watch-item__info__name">{watch.title}</p>
         <p className="watch-item__info__brand">{watch.brand}</p>
         <p className="watch-item__info__price">{`${watch.price} $`}</p>
-        <button type="button" className="watch-item__button">
+        <button
+          type="button"
+          className="watch-item__button"
+          onClick={() => router.push(`/${watch._id}`)}
+        >
           Discover
         </button>
       </div>
