@@ -22,7 +22,7 @@ const Navbar = () => {
         <div className="desktop-nav__left">
           <h1 className="desktop-nav__left__logo">LOGO</h1>
           <ul className="desktop-nav__left__list">
-            {['Home', 'About', 'Wish', 'Contact'].map((item, index) => (
+            {['Home', 'About', 'Favorites', 'Contact'].map((item, index) => (
               <li
                 key={index}
                 className={`desktop-nav__left__list__items ${
@@ -59,8 +59,8 @@ const Navbar = () => {
           </div>
         </div>
         <div className="mobile-nav__bottombar">
-          <Link href="/wish" className="mobile-nav__bottombar__wishlist">
-            <Wish active={currentRoute === '/wish' ? true : false} />
+          <Link href="/favorites" className="mobile-nav__bottombar__wishlist">
+            <Wish active={currentRoute === '/favorites' ? true : false} />
           </Link>
           <Link href="/contact" className="mobile-nav__bottombar__contact">
             <Contact active={currentRoute === '/contact' ? true : false} />

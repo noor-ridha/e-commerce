@@ -1,0 +1,21 @@
+.favorites {
+  margin-top: 100px;
+  width: 100%;
+  min-height: 70vh;
+
+  &__title {
+    font-size: 30px;
+    display: block;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .favorites {
+    &__title {
+      text-align: center;
+    }
+  }
+}
