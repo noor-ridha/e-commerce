@@ -32,7 +32,7 @@ const Footer = () => {
             About
           </Link>
           <Link href="/favorites" className="quick-links__list__item">
-            Wish
+            Favorites
           </Link>
           <Link href="/contact" className="quick-links__list__item">
             Contact
