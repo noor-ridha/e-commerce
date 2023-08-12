@@ -5,18 +5,21 @@ import WatchesList from './Items/WatchesList';
 import BestCollection from './BestCollection/BestCollection';
 import TodayCollection from './TodayCollection/TodayCollection';
 
+import { getWatches } from '../fetch/Watch';
+
 import './home.scss';
 
 interface HomePageProps {}
 
-const Home: NextPage<HomePageProps> = () => {
+const Home: NextPage<HomePageProps> = async () => {
+  const watches: Array<any> = await getWatches();
   return (
     <section className="home">
       <Hero />
-      <TodayCollection />
+      <TodayCollection watches={watches} />
       <h2 className="home__watches-title">Watches</h2>
-      <WatchesList />
-      <BestCollection />
+      <WatchesList watches={watches} />
+      <BestCollection watches={watches} />
     </section>
   );
 };

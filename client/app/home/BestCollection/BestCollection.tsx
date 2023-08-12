@@ -1,14 +1,24 @@
+import { FC } from 'react';
+
 import BestCollectionItem from './BestCollectionItem';
 
 import './BestCollection.scss';
 
-const BestCollection = () => {
+interface BestListProps {
+  watches: Array<any>;
+}
+
+const BestCollection: FC<BestListProps> = ({ watches }) => {
   return (
     <section className="best-collection">
       <h2 className="best-collection__title">Best Collection</h2>
-      <BestCollectionItem />
+      <div className="today-collection__list">
+        {watches?.map((watch) => (
+          <BestCollectionItem watch={watch} key={watch.id} />
+        ))}
+      </div>
     </section>
   );
-}
+};
 
 export default BestCollection;

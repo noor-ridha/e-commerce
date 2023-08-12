@@ -31,8 +31,8 @@ const Footer = () => {
           <Link href="/about" className="quick-links__list__item">
             About
           </Link>
-          <Link href="/wish" className="quick-links__list__item">
-            Wish
+          <Link href="/favorites" className="quick-links__list__item">
+            Favorites
           </Link>
           <Link href="/contact" className="quick-links__list__item">
             Contact
