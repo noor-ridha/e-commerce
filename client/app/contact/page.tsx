@@ -9,9 +9,6 @@ export default function page() {
         nobis id unde error obcaecati aliquid dolores ipsa tempora amet cumque
         alias, quaerat mollitia facere? Amet suscipit blanditiis dolorem maxime.
       </p>
-      <form className='contact__form'>
-        
-      </form>
     </div>
   );
 }
