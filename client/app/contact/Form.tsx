@@ -100,6 +100,7 @@ const ContactMeForm: FC<ContactMeFormProps> = () => {
   };
 
   const error = !validEmail || !validName || !validText;
+
   return (
     <>
       <form
