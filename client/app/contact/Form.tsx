@@ -1,3 +1,5 @@
+'use client';
+
 import { FC, FormEvent, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { FaSmileWink } from 'react-icons/fa';
@@ -14,8 +16,6 @@ const ContactMeForm: FC<ContactMeFormProps> = () => {
   const [submitError, setSubmitError] = useState<boolean>(false);
 
   const [submitted, setSubmitted] = useState<boolean>(false);
-
-  const [showModal, setShowModal] = useState<boolean>(false);
 
   const form = useRef<HTMLFormElement | null>(null);
 
@@ -67,8 +67,6 @@ const ContactMeForm: FC<ContactMeFormProps> = () => {
     const text = form.current.user_message.value;
 
     if (text.length === 0 || email.length === 0 || name.length === 0) {
-      setShowModal(true);
-
       validateEmail();
       validateName();
       validateText();
@@ -106,14 +104,12 @@ const ContactMeForm: FC<ContactMeFormProps> = () => {
     <>
       <form
         ref={form}
-        className={`contact-me__content__form column ${
-          validText ? '' : 'error'
-        }`}
+        className={`contact__form ${validText ? '' : 'error'}`}
         onSubmit={formSubmissionHandler}
       >
-        <h3 className="contact-me__content__form__title"> Let's Connect</h3>
+        <h3 className="contact__form__title"> Let's Connect</h3>
         {error === true && (
-          <div className="contact-me__content__form__error">
+          <div className="contact__form__error">
             {!validEmail && <p>* Please enter a valid email</p>}
             {!validName && (
               <p>
