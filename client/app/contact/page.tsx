@@ -3,6 +3,7 @@ import Form from './Form';
 import './Contact.scss';
 
 export default function page() {
+
   return (
     <div className="contact">
       <h2 className="contact__title">Contact Us</h2>

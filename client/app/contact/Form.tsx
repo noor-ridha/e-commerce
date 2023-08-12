@@ -101,6 +101,8 @@ const ContactMeForm: FC<ContactMeFormProps> = () => {
 
   const error = !validEmail || !validName || !validText;
 
+  // console.log(JSON.parse(localStorage?.getItem('favs')));
+
   return (
     <>
       <form

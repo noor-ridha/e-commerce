@@ -2,8 +2,14 @@
 
 import { createSlice } from '@reduxjs/toolkit';
 
+let fav: any[] = [];
+
+fav = localStorage.getItem('favs')
+  ? JSON.parse(localStorage.getItem('favs') as any)
+  : fav;
+
 const initialState: { watches: any[] } = {
-  watches: [],
+  watches: fav,
 };
 
 export const favoritesSlice = createSlice({
@@ -12,14 +18,18 @@ export const favoritesSlice = createSlice({
   reducers: {
     addToFavorites: (state, action) => {
       const { payload } = action;
-      state.watches = [...state.watches, payload];
+      const temp = [...state.watches, payload];
+      localStorage.setItem("favs", JSON.stringify(temp));
+      state.watches = temp;
     },
 
     removeFromFavorites: (state, action) => {
       const { payload } = action;
-      state.watches = state.watches.filter(
+      const temp = state.watches.filter(
         (watch) => watch._id !== payload._id,
       );
+      localStorage.setItem('favs', JSON.stringify(temp));
+      state.watches = temp;
     },
   },
 });
